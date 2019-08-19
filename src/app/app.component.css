@@ -1,0 +1,62 @@
+.playlist-controls {
+  color: rgb(195, 186, 186);
+  text-align: center;
+}
+
+.playlist-name {
+  font-weight: 600;
+}
+
+.playlist-icons {
+  font-size: 22;
+  vertical-align: center;
+  display: inline-block;
+}
+
+.playlist-music-name {
+  color: rgb(228, 219, 219);
+  font-weight: 600;
+  font-size: 22;
+}
+
+.playlist-music-album {
+  color: rgb(195, 186, 186);
+  font-size: 15;
+}
+
+.playlist-music-like {
+  font-size: 22;
+  vertical-align: center;
+  display: inline-block;
+}
+
+.music-controls {
+}
+
+.music-controls .random {
+  vertical-align: center;
+  display: inline-block;
+  font-size: 20;
+}
+.music-controls .backward {
+  text-align: center;
+  font-size: 25;
+  vertical-align: center;
+  display: inline-block;
+}
+.music-controls .forward {
+  text-align: center;
+  font-size: 25;
+  vertical-align: center;
+  display: inline-block;
+}
+.music-controls .play-stop {
+  text-align: center;
+  font-size: 60;
+}
+.music-controls .repeat {
+  text-align: right;
+  vertical-align: center;
+  display: inline-block;
+  font-size: 25;
+}
