@@ -38,6 +38,10 @@
   display: inline-block;
   font-size: 20;
 }
+
+.random-active {
+  color: green;
+}
 .music-controls .backward {
   text-align: center;
   font-size: 25;

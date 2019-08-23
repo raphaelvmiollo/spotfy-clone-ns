@@ -1,4 +1,4 @@
-<GridLayout rows="*" class="p-10" backgroundColor="black" color="#fff">
+<GridLayout rows="*" class="p-10 bottom-gradient" backgroundColor="black" color="#fff">
     <GridLayout columns="*" rows="40, auto, *" width="100%" height="100%">
         <GridLayout columns="*, 250, *" rows="*, *" row="0" col="0" class="playlist-controls">
             <Label col="0" rowspan="2" text="&#xf107;" class="fa playlist-icons"></Label>
@@ -9,19 +9,20 @@
 
         </GridLayout>
         <StackLayout col="0" row="1" class="m-t-15 p-l-25 p-r-25">
-            <Image src="~/images/capa.jpg" width="100%"></Image>
+            <Image [src]="currentMusic.music_file_album" width="100%"  (swipe)="onSwipe($event)"></Image>
             <GridLayout columns="*, auto" rows="auto, auto" class="m-t-15">
-                <Label col="0" row="0" text="Everthing Now" class="playlist-music-name"></Label>
-                <Label col="0" row="1" text="Arcade Fire" class="playlist-music-album"></Label>
+                <Label col="0" row="0" [text]="currentMusic.music_name" class="playlist-music-name"></Label>
+                <Label col="0" row="1" [text]="currentMusic.music_artist" class="playlist-music-album"></Label>
                 <Label col="1" rowspan="2" text="&#xf08a;" class="fa playlist-music-like"></Label>
 
             </GridLayout>
+            <Slider  value="0" minValue="0" maxValue="100" color="red" backgroundoColor="red"></Slider>
         </StackLayout>
         <GridLayout row="2" col="0" columns="*, *, *, *, *" rows="auto, auto, auto, auto" class="m-t-15 p-l-25 p-r-25 music-controls">
-            <label col="0" row="2" text="&#xf074;" class="fa  random"></label>
-            <label col="1" row="2" text="&#xf048;" class="fa  backward"></label>
-            <label col="2" row="2" text="&#xf144;" class="fa  play-stop" ></label>
-            <label col="3" row="2" text="&#xf051;" class="fa  forward"></label>
+            <label col="0" row="2" text="&#xf074;" class="fa  random" [class.random-active]="random" (tap)="randomChange()" ></label>
+            <label col="1" row="2" text="&#xf048;" class="fa  backward" (tap)="previousMusic();"></label>
+            <label col="2" row="2" text="&#xf144;" class="fa  play-stop"></label>
+            <label col="3" row="2" text="&#xf051;" class="fa  forward" (tap)="nextMusic();" ></label>
             <label col="4" row="2" text="&#xf01e;" class="fa  repeat"></label>
 
         </GridLayout>
